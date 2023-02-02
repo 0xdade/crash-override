@@ -16,10 +16,8 @@ bot = CrashOverride()
 
 @bot.event
 async def on_ready():
-    await bot.tree.sync()
     print("Ready!")
 
 
 asyncio.run(bot.setup())
-print(list(bot.commands)[0].name)
 bot.run(DISCORD_TOKEN)

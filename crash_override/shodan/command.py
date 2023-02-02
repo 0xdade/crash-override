@@ -12,7 +12,7 @@ from crash_override.shodan.models import ShodanHostResponse
 class Shodan(commands.Cog):
     @commands.Cog.listener()
     async def on_ready(self):
-        print(f"{self} loaded")
+        print(f"{self.__cog_name__} loaded")
 
     def __init__(self, bot: commands.Bot):
         self.bot = bot

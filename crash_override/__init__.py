@@ -1,6 +1,7 @@
 import discord
 from discord.ext.commands import Bot
 from crash_override.shodan.command import Shodan
+from crash_override.sync.command import Sync
 
 from crash_override.config import COMMAND_PREFIX
 
@@ -15,6 +16,7 @@ class CrashOverride(Bot):
 
     async def setup(self):
         await self.add_cog(Shodan(self))
+        await self.add_cog(Sync(self))
 
     async def on_ready(self):
         print("Logged on as", self.user)
